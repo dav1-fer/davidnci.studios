@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+/* Importing the typefaces */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #101010;
+    color: #fafafa;
+    font-family: "@Satoshi", sans-serif;
+    font-size: 24px;
+}
+
+/* navigation menu styles */
+header {
+    display: flex;
+    align-items: center;
+    padding: 16px 64px;
+    border-bottom: 1px solid #fafafa;
+}
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-container img {
+    width: 248px;
+}
+.nav-links li {
+    display: inline;
+    margin: 0 48px;
+}
+.nav-links li a {
+    position: relative;
+    text-decoration: none;
+    color: #fafafa;
+}
+.nav-links li a::after {
+    background-color: #fff;
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.2s ease-in-out;
+}
+.nav-links li a:hover::after {
+    width: 100%;
+}
+.nav-links li a:active {
+    color: #FFDDB7; 
+}
+
+/* main content styles */
+main {
+    height: 608px;
+    display: flex;
+    flex-direction: column;
+    padding: 56px 80px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 1088px;
+    height: auto;
+}
+.main-content h1 {
+    font-family: "Bebas Neue";
+    font-size: 140px;
+    letter-spacing: 16px;
+}
+.main-content p {
+    line-height: 160%;
+}
+hr {
+    margin-bottom: 16px;
+}
+
+/* social media links styles */
+.social-links {
+    font-size: 28px;
+    margin-top: auto;
+    margin-left: auto;
+}
+.social-links li {
+    display: inline;
+    margin: 0 32px;
+}
+.social-links li a {
+    color: #fafafa; 
+}
+.social-links li a:active {
+    color: #FFDDB7; 
+}
+
