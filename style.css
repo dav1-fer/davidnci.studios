@@ -156,11 +156,15 @@ hr {
     cursor: pointer;
 }
 
+#projects-section a {
+    text-decoration: none;
+    color: #000;
+}
+
 #projects-section button:hover {
     border: 2px solid #fafafa;
     background-color: transparent;
     color: #fafafa;
-
 }
 /* about section styles */
 #about-section {
