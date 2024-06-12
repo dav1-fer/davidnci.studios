@@ -101,3 +101,79 @@ hr {
     color: #FFDDB7; 
 }
 
+#projects-section h2 {
+    font-size: 4rem;
+    margin: 0px 80px 32px 80px;
+}
+
+.content-wrapper {
+    display: flex;
+    
+}
+.card-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 16px 64px 80px;
+    border-top: 1px solid #fafafa;
+    border-bottom: 1px solid #fafafa;
+}
+
+.card-content p {
+    margin-top: 16px;
+    margin-right: 80px;
+}
+
+.card-wrapper h3 {
+    font-size: 5rem;
+    letter-spacing: 8px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 24px;
+}
+
+.tag-wrapper {
+    width: 600px;
+    display: flex;
+}
+
+.tag-card {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    border: 1px solid #fafafa;
+    border-radius: 40px;
+    padding: 16px 16px;
+    margin: 0 8px;
+    cursor: pointer;
+}
+
+#projects-section button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    border: 1px solid #fafafa;
+    border-radius: 40px;
+    padding: 16px 32px;
+    margin: 64px auto;
+    cursor: pointer;
+}
+
+#about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 80px;
+}
+.heading-content h2 {
+    font-size: 6rem;
+}
+#about-section p {
+    width: 600px;
+}
+
+#about-section aside {
+    margin-right: 80px;
+}
