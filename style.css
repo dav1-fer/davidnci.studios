@@ -1,6 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-
+/* Light */
+@font-face {
+    font-family: 'Satoshi-Light';
+    src: url('assets/fonts/Satoshi-Light.woff2') format('woff2'),
+         url('../fonts/MyCustomFont-Light.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+/* Regular */
+@font-face {
+    font-family: 'Satoshi-Regular';
+    src: url('assets/fonts/Satoshi-Regular.woff2') format('woff2'),
+         url('../fonts/MyCustomFont-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+/* Medium */
+@font-face {
+    font-family: 'Satoshi-Medium';
+    src: url('assets/fonts/Satoshi-Medium.woff2') format('woff2'),
+         url('../fonts/Satoshi-Medium.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+/* Bold */
+@font-face {
+    font-family: 'Satoshi-Bold';
+    src: url('assets/fonts/Satoshi-Bold.woff2') format('woff2'),
+         url('../fonts/Satoshi-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+/* Black */
+@font-face {
+    font-family: 'Satoshi-Black';
+    src: url('assets/fonts/Satoshi-Black.woff2') format('woff2'),
+         url('../fonts/Satoshi-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
 /* Importing the typefaces */
 
 * {
@@ -9,9 +48,10 @@
     padding: 0;
 }
 body {
+    overflow-x: hidden;
     background-color: #101010;
     color: #fafafa;
-    font-family: "@Satoshi", sans-serif;
+    font-family: "Satoshi-Regular", sans-serif;
     font-size: 24px;
 }
 
@@ -21,6 +61,7 @@ header {
     align-items: center;
     padding: 16px 64px;
     border-bottom: 1px solid #fafafa;
+    animation: navSlide 1.3s ease;
 }
 nav {
     width: 100%;
@@ -72,11 +113,14 @@ main {
     flex-direction: column;
     max-width: 1088px;
     height: auto;
+    animation: headingSlide 1s ease 0.5s;
+    animation-delay: 0.4s;
 }
 .main-content h1 {
-    font-family: "Bebas Neue";
+    font-family: "Bebas Neue", sans-serif;
     font-size: 140px;
     letter-spacing: 16px;
+    transition: all 0.3s ease;
 }
 .main-content p {
     line-height: 160%;
@@ -90,6 +134,8 @@ hr {
     font-size: 28px;
     margin-top: auto;
     margin-left: auto;
+    animation: socialSlide 1s ease 0.5s;
+    animation-delay: 0.4s;
 }
 .social-links li {
     display: inline;
@@ -101,14 +147,15 @@ hr {
 .social-links li a:active {
     color: #FFDDB7; 
 }
+
 /* last projects section styles */
 #projects-section h2 {
+    font-family: "Satoshi-Bold", sans-serif;
     font-size: 4rem;
     margin: 0px 80px 32px 80px;
 }
 .content-wrapper {
-    display: flex;
-    
+    display: flex;   
 }
 .card-content {
     width: 100%;
@@ -117,6 +164,15 @@ hr {
     padding: 32px 16px 64px 80px;
     border-top: 1px solid #fafafa;
     border-bottom: 1px solid #fafafa;
+    transition: 0.5s ease;
+}
+.card-content:hover {
+    background-color: #FFDDB7;
+    cursor: pointer;
+    h3, p, .tag-wrapper {color: #202020;}
+    .tag-card{
+        border: 1.5px solid #202020;
+    }
 }
 .card-content p {
     margin-top: 16px;
@@ -145,6 +201,7 @@ hr {
     cursor: pointer;
 }
 #projects-section button {
+    font-family: "Satoshi-Medium", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -162,6 +219,7 @@ hr {
 }
 
 #projects-section button:hover {
+    font-family: "Satoshi-Medium", sans-serif;
     border: 2px solid #fafafa;
     background-color: transparent;
     color: #fafafa;
@@ -174,6 +232,7 @@ hr {
     margin: 80px;
 }
 .heading-content h2 {
+    font-family: "Satoshi-Bold", sans-serif;
     font-size: 6rem;
 }
 #about-section p {
@@ -212,6 +271,27 @@ footer p {
     text-align: right;
 }
 
+/* animations */
+@keyframes navSlide {
+    0%{
+        transform: translateY(-400px);
+     }
+}
+@keyframes headingSlide {
+    0%{
+       transform: translateX(-400px);
+       opacity: 0;
+    }
+}
+@keyframes socialSlide {
+    0%{
+        transform: translateX(400px);
+        opacity: 0;
+    }
+}
+
+
+/* responsiveness */
 @media (max-width:1200px) {
     #about-section {
         display: flex;

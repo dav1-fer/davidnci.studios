@@ -1,6 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-
+/* Light */
+@font-face {
+    font-family: 'Satoshi-Light';
+    src: url('assets/fonts/Satoshi-Light.woff2') format('woff2'),
+         url('../fonts/MyCustomFont-Light.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+/* Regular */
+@font-face {
+    font-family: 'Satoshi-Regular';
+    src: url('assets/fonts/Satoshi-Regular.woff2') format('woff2'),
+         url('../fonts/MyCustomFont-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+/* Medium */
+@font-face {
+    font-family: 'Satoshi-Medium';
+    src: url('assets/fonts/Satoshi-Medium.woff2') format('woff2'),
+         url('../fonts/Satoshi-Medium.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+/* Bold */
+@font-face {
+    font-family: 'Satoshi-Bold';
+    src: url('assets/fonts/Satoshi-Bold.woff2') format('woff2'),
+         url('../fonts/Satoshi-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+/* Black */
+@font-face {
+    font-family: 'Satoshi-Black';
+    src: url('assets/fonts/Satoshi-Black.woff2') format('woff2'),
+         url('../fonts/Satoshi-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
 /* Importing the typefaces */
 
 * {
@@ -42,10 +81,10 @@ main {
 }
 
 main h1 {
-    font-family: "Bebas Neue";
-    font-size: 8rem;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 9rem;
     font-weight: 100;
-    letter-spacing: 24px;
+    letter-spacing: 48px;
 }
 
 main aside img {
@@ -53,7 +92,6 @@ main aside img {
 }
 
 /* explore navigation styles */
-
 .explore-content {
     width: 100%;
     display: flex;
@@ -97,10 +135,7 @@ main aside img {
 /* remove default cancel cross of the search input */
 input[type="search"]::-webkit-search-cancel-button {
     display: none;
-  }
-
-
-
+}
 
 /* projects section styles */
 .content-wrapper {
@@ -114,6 +149,15 @@ input[type="search"]::-webkit-search-cancel-button {
     padding: 32px 16px 64px 80px;
     border-top: 1px solid #fafafa;
     border-bottom: 1px solid #fafafa;
+    transition: 0.5s ease;
+}
+.card-content:hover {
+    background-color: #FFDDB7;
+    cursor: pointer;
+    h3, p, .tag-wrapper {color: #202020;}
+    .tag-card{
+        border: 1.5px solid #202020;
+    }
 }
 .card-content p {
     margin-top: 16px;
